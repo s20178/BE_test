@@ -1,6 +1,7 @@
 ﻿using BE_test.Interfaces;
 using BE_test.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
 namespace BE_test.Controllers
 {
