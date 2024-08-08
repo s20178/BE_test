@@ -1,0 +1,8 @@
+A:\repos\Bakend_test\Tests\TestProject\bin\Debug\net8.0\.msCoverageSourceRootsMapping_TestProject
+A:\repos\Bakend_test\Tests\TestProject\bin\Debug\net8.0\CoverletSourceRootsMapping_TestProject
+A:\repos\Bakend_test\Tests\TestProject\obj\Debug\net8.0\TestProject.csproj.AssemblyReference.cache
+A:\repos\Bakend_test\Tests\TestProject\obj\Debug\net8.0\TestProject.GeneratedMSBuildEditorConfig.editorconfig
+A:\repos\Bakend_test\Tests\TestProject\obj\Debug\net8.0\TestProject.AssemblyInfoInputs.cache
+A:\repos\Bakend_test\Tests\TestProject\obj\Debug\net8.0\TestProject.AssemblyInfo.cs
+A:\repos\Bakend_test\Tests\TestProject\obj\Debug\net8.0\TestProject.csproj.CoreCompileInputs.cache
+A:\repos\Bakend_test\Tests\TestProject\obj\Debug\net8.0\TestProject.sourcelink.json
