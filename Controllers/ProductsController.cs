@@ -7,16 +7,11 @@ namespace BE_test.Controllers
     [ApiController]
     [Route("api/[controller]")]
     [Produces("application/json", "application/xml")]
-    public class ProductsController : ControllerBase
+    public class ProductsController(IProductRepository repository, ILogger<ProductsController> logger) : ControllerBase
     {
-        private readonly IProductRepository _repository;
-        private readonly ILogger<ProductsController> _logger;
+        private readonly IProductRepository _repository = repository;
+        private readonly ILogger<ProductsController> _logger = logger;
 
-        public ProductsController(IProductRepository repository, ILogger<ProductsController> logger)
-        {
-            _repository = repository;
-            _logger = logger;
-        }
         [HttpGet]
         public IActionResult GetAll()
         {
@@ -24,6 +19,7 @@ namespace BE_test.Controllers
             var products = _repository.GetAll();
             return Ok(products);
         }
+
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
@@ -36,6 +32,7 @@ namespace BE_test.Controllers
             }
             return Ok(product);
         }
+
         [HttpPost]
         public IActionResult Add([FromBody] Product product)
         {
@@ -80,6 +77,7 @@ namespace BE_test.Controllers
             _logger.LogInformation("Product with ID {ProductId} updated successfully", product.Id);
             return NoContent();
         }
+
         [HttpDelete]
         public IActionResult Delete(int id)
         {
@@ -89,7 +87,7 @@ namespace BE_test.Controllers
             {
                 return NotFound();
             }
-            _repository.DeleteById(id);
+            _repository.Delete(product);
             _logger.LogInformation("Product with ID {ProductId} deleted successfully", id);
             return NoContent();
         }
